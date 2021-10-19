@@ -12,11 +12,11 @@ body{
 
 /* 00000000 HEADER 00000000 */
 header {
+  width: 90%;
+  height: 90px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 90%;
-  height: 10vh;
   position: fixed;
   top: 0;
   right: 0;
@@ -37,4 +37,36 @@ header .btn-container {
   padding: 14px 28px;
   border: 2px solid white;
   border-radius: 50px;
+}
+
+/* 00000000 CONTAINER - header ~ aside ~ main 00000000 */
+body > .container {
+  display: flex;
+}
+
+/* 00000000 ASIDE 00000000 */
+aside {
+  width: 10%;
+  height: calc(100vh - 90px);
+  background-color: royalblue;
+}
+
+/* 00000000 MAIN 00000000 */
+main {
+  width: 90%;
+  height: calc(100vh - 90px);
+  overflow-x: scroll;
+  background-color: sandybrown;
+  padding-top: 10vh;
+}
+
+/* 00000000 FOOTER 000000000 */
+footer {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: slateblue;
 }
