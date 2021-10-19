@@ -100,7 +100,7 @@ main {
   height: calc(100vh - 90px);
   overflow-x: scroll;
   background-color: rgb(20, 25, 34);
-  padding: 90px 20px 0;
+  padding: 90px 20px 10px;
 }
 
 /* MAIN - categories section */
@@ -164,6 +164,7 @@ section.container span {
   color: rgba(121, 123, 128, 1);
 }
 
+/* MAIN - madefor section */
 .playlist h3 {
   text-align: center;
   color: white;
@@ -183,8 +184,12 @@ section.container span {
   margin-bottom: 10px;
 }
 
-
-
+/* MAIN - popular section */
+.playlist img.artist {
+  width: 80%;
+  margin: 10px 0;
+  border-radius: 50%;
+}
 
 /* 00000000 FOOTER 000000000 */
 footer {
