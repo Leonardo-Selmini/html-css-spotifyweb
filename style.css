@@ -48,7 +48,46 @@ body > .container {
 aside {
   width: 10%;
   height: calc(100vh - 90px);
-  background-color: royalblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(28, 28, 30);
+  padding: 10px 0;
+}
+
+aside .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside .item {
+  margin-bottom: 10px;
+}
+
+#logo {
+  margin-bottom: 20px;
+}
+
+#logo img {
+  width: 32px;
+}
+
+aside .item img {
+  width: 30px;
+}
+
+#download img {
+  width: 20px;
+}
+
+#user {
+  margin-bottom: 0;
+}
+
+#user i{
+  font-size: 30px;
+  color: white;
 }
 
 /* 00000000 MAIN 00000000 */
