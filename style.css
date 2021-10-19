@@ -90,9 +90,8 @@ aside .item img {
   margin-bottom: 0;
 }
 
-#user i{
-  font-size: 30px;
-  color: white;
+#user img {
+  border-radius: 50%;
 }
 
 /* 00000000 MAIN 00000000 */
@@ -125,14 +124,14 @@ main {
   border-radius: 5px;
 }
 
-/* MAIN - played section */
-#played h1 {
+/* MAIN - sections */
+section.container h2 {
   font-size: 26px;
   color: white;
   margin: 10px 0 20px;
 }
 
-#playlist-container {
+.playlist-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -145,10 +144,12 @@ main {
   flex-flow: column wrap;
   align-items: center;
   margin-bottom: 10px;
+  border-radius: 6px;
 }
 
 .playlist img {
   width: 100%;
+  border-radius: 6px;
 }
 
 .playlist h4 {
@@ -158,10 +159,30 @@ main {
   margin: 10px 0 4px;
 }
 
-.playlist span {
+section.container span {
   font-size: 12px;
   color: rgba(121, 123, 128, 1);
 }
+
+.playlist h3 {
+  text-align: center;
+  color: white;
+  margin: 10px 0 4px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-container h2.no-margin {
+  margin-bottom: 0px;
+}
+
+.title-container span {
+  margin-bottom: 10px;
+}
+
 
 
 
