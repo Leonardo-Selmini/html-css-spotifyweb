@@ -5,3 +5,36 @@
   box-sizing: border-box;
   font-family: 'DM Sans', sans-serif;
 }
+
+body{
+  position: relative;
+}
+
+/* 00000000 HEADER 00000000 */
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 90%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+}
+
+header .btn-container {
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+#upgrade-btn {
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border: 2px solid white;
+  border-radius: 50px;
+}
