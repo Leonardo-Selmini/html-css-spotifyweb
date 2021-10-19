@@ -22,20 +22,20 @@ header {
   right: 0;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.4);
-  font-size: 14px;
 }
 
 header .btn-container {
   text-decoration: none;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 #upgrade-btn {
   color: white;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 14px 28px;
-  border: 2px solid white;
+  padding: 10px 24px;
+  border: 1px solid white;
   border-radius: 50px;
 }
 
@@ -51,7 +51,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgb(28, 28, 30);
+  background-color: rgba(0, 0, 0, 1);
   padding: 10px 0;
 }
 
@@ -62,7 +62,12 @@ aside .box {
 }
 
 aside .item {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  padding: 2px 0;
   margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 #logo {
@@ -95,9 +100,66 @@ main {
   width: 90%;
   height: calc(100vh - 90px);
   overflow-x: scroll;
-  background-color: sandybrown;
-  padding-top: 10vh;
+  background-color: rgb(20, 25, 34);
+  padding: 90px 20px 0;
 }
+
+/* MAIN - categories section */
+#categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#categories li {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  list-style: none;
+  color: rgba(121, 123, 128, 1);
+  padding: 5px;
+  margin: 10px 2px;
+  border-radius: 5px;
+}
+
+/* MAIN - played section */
+#played h1 {
+  font-size: 26px;
+  color: white;
+  margin: 10px 0 20px;
+}
+
+#playlist-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.playlist {
+  width: calc(100% / 2 - 10px);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.playlist img {
+  width: 100%;
+}
+
+.playlist h4 {
+  color: white;
+  margin: 10px 0 8px;
+}
+
+.playlist span {
+  font-size: 12px;
+  color: rgba(121, 123, 128, 1);
+}
+
+
 
 /* 00000000 FOOTER 000000000 */
 footer {
