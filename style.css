@@ -120,7 +120,7 @@ main {
   list-style: none;
   color: rgba(121, 123, 128, 1);
   padding: 5px;
-  margin: 10px 2px;
+  margin: 10px 4px;
   border-radius: 5px;
 }
 
@@ -199,5 +199,51 @@ footer {
   bottom: 0;
   left: 0;
   z-index: 1;
-  background-color: slateblue;
+  background-color: lightseagreen;
+}
+
+/* FOOTER - song section */
+#song {
+  display: flex;
+}
+
+#song img {
+  width: 33px;
+  margin-right: 6px;
+}
+
+.song-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.song-info h5 {
+  height: 13px;
+  max-width: 50px;
+  line-height: 13px;
+  color: white;
+}
+
+.song-info span {
+  height: 10px;
+  max-width: 50px;
+  line-height: 10px;
+  font-size: 8px;
+  font-weight: 700;
+  color: rgba(121, 123, 128, 1);
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.song-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: rgba(121, 123, 128, 1);
+}
+
+.song-icon i {
+  font-size: 14px;
 }
