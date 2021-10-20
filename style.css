@@ -202,7 +202,7 @@ footer {
   bottom: 0;
   left: 0;
   z-index: 1;
-  background-color: lightseagreen;
+  background-color:rgba(40, 40, 40, 1);
   padding: 10px;
 }
 
@@ -214,7 +214,7 @@ footer {
 
 #song img {
   width: 30px;
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
 .song-info {
@@ -248,12 +248,12 @@ footer {
 .song-icon {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  color: rgba(121, 123, 128, 1);
+  justify-content: space-between;
+  color: white;
 }
 
 .song-icon i {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* footer - play section */
@@ -273,6 +273,7 @@ footer {
 }
 
 #play li {
+  display: flex;
   list-style: none;
   padding: 2px;
   color: white;
@@ -295,3 +296,25 @@ footer {
   margin: 0 4px;
 }
 
+/* FOOTER - volume section */
+#volume {
+  width: 30%;
+  padding-left: 10px;
+}
+
+#volume ul {
+  display: flex;
+  align-items: center;
+}
+
+#volume li {
+  display: flex;
+  list-style: none;
+  padding: 1px;
+}
+
+#volume li i {
+  font-size: 13px;
+  color: white;
+  margin-left: 4px;
+}
