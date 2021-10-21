@@ -160,15 +160,15 @@ section.container h2 {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .playlist {
-  width: calc(100% / 2 - 5px);
+  width: calc(100% / 2);
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   margin-bottom: 10px;
+  padding: 0 2px;
   border-radius: 6px;
 }
 
@@ -435,5 +435,11 @@ footer {
   main {
     width: calc(100% - 192px);
   }
+}
 
+/* MEDIA QUERY size MD */
+@media screen and (min-width: 769px) {
+  .playlist {
+    width: calc(100% / 4 - 5px);
+  }
 }
