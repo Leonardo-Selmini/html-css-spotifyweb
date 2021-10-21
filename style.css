@@ -185,6 +185,7 @@ section.container h2 {
 }
 
 section.container span {
+  text-align: center;
   font-size: 12px;
   color: rgba(121, 123, 128, 1);
 }
@@ -205,7 +206,8 @@ section.container span {
   margin-bottom: 0px;
 }
 
-.title-container span {
+.container .title-container span {
+  text-align: initial;
   margin-bottom: 10px;
 }
 
@@ -440,6 +442,36 @@ footer {
 /* MEDIA QUERY size MD */
 @media screen and (min-width: 769px) {
   .playlist {
-    width: calc(100% / 4 - 5px);
+    width: calc(100% / 4);
+  }
+}
+
+/* MEDIA QUERY size LG */
+@media screen and (min-width: 1025px) {
+
+  /* MAIN - played section */
+  .playlist {
+    width: calc(100% / 6);
+  }
+
+  .playlist h4 {
+    line-height: 14px;
+    font-size: 12px;
+  }
+  
+  section.container span {
+    text-align: center;
+    font-size: 10px;
+    color: rgba(121, 123, 128, 1);
+  }
+
+  /* MAIN - madefor section */
+  .playlist h3 {
+    font-size: 16px;
+  }
+
+  /* FOOTER - volume section */
+  #volume {
+    padding-left: 30px;
   }
 }
