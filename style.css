@@ -12,7 +12,7 @@ body{
 
 /* 00000000 HEADER 00000000 */
 header {
-  width: 90%;
+  width: calc(100% - 42px);
   height: 90px;
   display: flex;
   justify-content: flex-end;
@@ -46,13 +46,17 @@ body > .container {
 
 /* 00000000 ASIDE 00000000 */
 aside {
-  width: 10%;
+  width: 42px;
   height: calc(100vh - 90px);
+  background-color: rgba(0, 0, 0, 1);
+  padding: 10px 0;
+}
+
+aside .container {
+  height: calc(100% - 57px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 1);
-  padding: 10px 0;
 }
 
 aside .box {
@@ -61,16 +65,9 @@ aside .box {
   align-items: center;
 }
 
-aside .item {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  padding: 2px 0;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-
 #logo {
+  width: 100%;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -78,10 +75,29 @@ aside .item {
   width: 32px;
 }
 
+#logo img:nth-child(2) {
+  display: none;
+}
+
+aside .item {
+  width: 80%;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 0;
+  border-radius: 5px;
+}
+
 aside .item img {
   width: 30px;
 }
 
+aside .item h5 {
+  display: none;
+}
+
+/* ASIDE - download ~ user section */
 #download img {
   width: 20px;
 }
@@ -91,12 +107,21 @@ aside .item img {
 }
 
 #user img {
+  height: 30px;
   border-radius: 50%;
+}
+
+#user h4 {
+  display: none;
+}
+
+#library {
+  display: none;
 }
 
 /* 00000000 MAIN 00000000 */
 main {
-  width: 90%;
+  width: calc(100% - 42px);
   height: calc(100vh - 90px);
   overflow-x: scroll;
   background-color: rgb(20, 25, 34);
@@ -218,6 +243,7 @@ footer {
 }
 
 .song-info {
+  width: 45%;
   display: flex;
   flex-direction: column;
   margin-right: 6px;
@@ -225,7 +251,7 @@ footer {
 
 .song-info h6 {
   height: 10px;
-  max-width: 45px;
+  max-width: 100%;
   line-height: 10px;
   color: white;
   white-space: nowrap;
@@ -235,7 +261,7 @@ footer {
 
 .song-info span {
   height: 10px;
-  max-width: 45px;
+  max-width: 100%;
   line-height: 10px;
   font-size: 8px;
   font-weight: 700;
@@ -256,7 +282,7 @@ footer {
   font-size: 13px;
 }
 
-/* footer - play section */
+/* FOOTER - play section */
 #play {
   width: 40%;
   height: 100%;
@@ -317,4 +343,97 @@ footer {
   font-size: 13px;
   color: white;
   margin-left: 4px;
+}
+
+/* MEDIA QUERY size S */
+@media screen and (min-width: 481px) {
+  
+  /* 00000000 HEADER S 00000000 */
+  header {
+    width: calc(100% - 192px);
+  }
+
+  /* 00000000 ASIDE S 00000000 */
+  aside {
+    width: 192px;
+    padding: 10px 20px;
+  }
+
+  #logo img:nth-child(1) {
+    display: none;
+  }
+
+  #logo img:nth-child(2) {
+    display: block;
+    width: 140px;
+  }
+
+  aside .container {
+    height: calc(100% - 61.97px);
+  }
+
+  aside .box {
+    align-items: flex-start;
+  }
+
+  aside .item {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+
+  }
+
+  aside .item h5 {
+    display: block;
+    color: rgba(90, 90, 90, 1);
+    margin-left: 10px;
+  }
+
+  /* library section S */
+  #library {
+    width: 100%;
+    display: block;
+  }
+
+  #library h3 {
+    color: white;
+    margin: 10px 0 5px;
+  }
+
+  #library ul li {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    font-size: 14px;
+    list-style: none;
+    color: rgba(90, 90, 90, 1);
+  }
+
+  #library li#create-pl {
+    height: 34px;
+    font-size: initial;
+  }
+
+  #library li#create-pl i {
+    font-size: 18px;
+    margin-right: 8px;
+  }
+
+  /* donwload ~ user section S */
+  #download img {
+    width: 24px;
+  }
+  
+  #user h4 {
+    display: block;
+    color: white;
+    margin-left: 8px;
+  }
+
+  /* 00000000 MAIN S 00000000 */
+  main {
+    width: calc(100% - 192px);
+  }
+
 }
