@@ -37,6 +37,12 @@ header .btn-container {
   padding: 10px 24px;
   border: 1px solid white;
   border-radius: 50px;
+  transition: transform 1s;
+}
+
+#upgrade-btn:hover {
+  transform: scale(1.05);
+  background-color: rgba(46, 46, 46, 0.4);
 }
 
 /* 00000000 CONTAINER - header ~ aside ~ main 00000000 */
@@ -99,8 +105,16 @@ aside .item {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2px 0;
+  padding: 0 2px;
   border-radius: 5px;
+}
+
+aside .item:hover {
+  background-color: rgb(20, 20, 20);
+}
+
+aside .item:hover h5 {
+  color: white;
 }
 
 aside .item img {
@@ -114,6 +128,10 @@ aside .item h5 {
 /* ASIDE - download ~ user section */
 #download img {
   width: 20px;
+}
+
+#download:hover img {
+  transform: scale(1.1);
 }
 
 #user {
@@ -152,18 +170,34 @@ main {
 #categories li {
   height: 40px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   list-style: none;
   color: rgba(121, 123, 128, 1);
-  padding: 5px;
   margin: 10px 4px;
+  padding: 5px;
   border-radius: 5px;
 }
 
-/* MAIN - sections */
+#categories li:hover {
+  color: white;
+}
+
+#categories li hr {
+  width: 40px;
+  display: none;
+  border: 1px solid rgb(30, 215, 96);
+}
+
+#categories li:hover hr {
+  display: block;
+}
+
+/* MAIN - played sections */
 section.container h2 {
   font-size: 26px;
   color: white;
@@ -186,9 +220,37 @@ section.container h2 {
   border-radius: 6px;
 }
 
+.playlist .img {
+  position: relative;
+}
+
 .playlist img {
   width: 100%;
+  display: block;
   border-radius: 6px;
+}
+
+.playlist .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  border-radius: 6px;
+}
+
+.playlist:hover .overlay {
+  opacity: 1;
+}
+
+.playlist .overlay i {
+  font-size: 50px;
+  color: white;
 }
 
 .playlist h4 {
@@ -230,6 +292,11 @@ section.container span {
   width: 80%;
   margin: 10px 0;
   border-radius: 50%;
+  transition: filter 1s;
+}
+
+.playlist:hover img.artist {
+  filter: brightness(1.4);
 }
 
 /* 00000000 FOOTER 000000000 */
@@ -287,15 +354,24 @@ footer {
   text-overflow: ellipsis;
 }
 
+.song-info span:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 .song-icon {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: white;
 }
 
 .song-icon i {
   font-size: 13px;
+  color: rgba(90, 90, 90, 1);
+}
+
+.song-icon i:hover {
+  color: white;
 }
 
 /* FOOTER - play section */
@@ -323,6 +399,12 @@ footer {
 
 #play-icon {
   font-size: 24px;
+  transition: transform 500ms;
+}
+
+#play li i:hover {
+  transform: scale(1.2);
+  color: rgb(30, 215, 96);
 }
 
 .time {
@@ -333,9 +415,28 @@ footer {
 .time-bar {
   height: 4px;
   width: 100%;
+  position: relative;
   border-radius: 2px;
   background-color: rgba(90, 90, 90, 1);
   margin: 0 4px;
+}
+
+#animation-bar {
+  height: 4px;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(121, 123, 128, 1);
+  border-radius: 2px;
+  animation-name: bar-grow;
+  animation-duration: 251s;
+  animation-timing-function: linear;
+}
+
+@keyframes bar-grow {
+  from {width: 0;}
+  to { width: 100%;}
 }
 
 /* FOOTER - volume section */
@@ -346,6 +447,7 @@ footer {
 
 #volume ul {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -359,6 +461,39 @@ footer {
   font-size: 13px;
   color: white;
   margin-left: 4px;
+}
+
+#volume li i:hover {
+  color: rgb(30, 215, 96);
+}
+
+#volume li.time-bar {
+  max-width: 100px;
+}
+
+#hover-bar {
+  height: 4px;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(30, 215, 96);
+  opacity: 0;
+  border-radius: 2px;
+}
+
+#hover-bar span {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#volume li.time-bar:hover #hover-bar {
+  opacity: 1;
 }
 
 /* MEDIA QUERY size S */
@@ -416,6 +551,33 @@ footer {
     margin: 10px 0 5px;
   }
 
+  #create-pl {
+    width: 100%;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    color: rgba(90, 90, 90, 1);
+    padding: 0 2px;
+    border-radius: 5px;
+  }
+
+  #create-pl:hover {
+    background-color: rgb(20, 20, 20);
+  }
+
+  #create-pl i {
+    font-size: 18px;
+    margin-right: 8px;
+  }
+
+  #create-pl:hover i {
+    color: rgb(30, 215, 96);
+  }
+
+  #create-pl:hover h5 {
+    color: white;
+  }
+  
   .library ul {
     width: 100%;
     display: flex;
@@ -431,18 +593,13 @@ footer {
     font-size: 14px;
     list-style: none;
     color: rgba(90, 90, 90, 1);
+    padding: 0 2px;
   }
 
-  #create-pl {
-    height: 34px;
-    display: flex;
-    align-items: center;
-    color: rgba(90, 90, 90, 1);
-  }
-
-  #create-pl i {
-    font-size: 18px;
-    margin-right: 8px;
+  .library ul li:hover {
+    background-color: rgb(20, 20, 20);
+    color: white;
+    border-right: 2px solid rgb(30, 215, 96);
   }
 
   /* donwload ~ user section S */
@@ -464,15 +621,43 @@ footer {
 
 /* MEDIA QUERY size MD */
 @media screen and (min-width: 769px) {
+
+  /* MAIN - played section MD */
   .playlist {
     width: calc(100% / 4);
+  }
+
+  /* FOOTER - song section MD */
+  #song img {
+    width: 45px;
+  }
+
+  .song-info h6 {
+    height: 15px;
+    line-height: 15px;
+    font-size: 14px;
+  }
+
+  .song-info span {
+    height: 15px;
+    line-height: 15px;
+    font-size: 10px;
+  }
+
+  .song-icon i {
+    font-size: 18px;
+  }
+
+  /* FOOTER - volume section MD */
+  #volume li i {
+    font-size: 18px;
+    margin: 0 5px;
   }
 }
 
 /* MEDIA QUERY size LG */
 @media screen and (min-width: 1025px) {
-
-  /* MAIN - played section */
+  /* MAIN - played section LG */
   .playlist-container {
     flex-wrap: nowrap;
     overflow: scroll;
@@ -480,6 +665,7 @@ footer {
 
   .playlist {
     min-width: 200px;
+    width: 200px;
   }
 
   .playlist h4 {
@@ -493,12 +679,12 @@ footer {
     color: rgba(121, 123, 128, 1);
   }
 
-  /* MAIN - madefor section */
+  /* MAIN - madefor section LG */
   .playlist h3 {
     font-size: 16px;
   }
 
-  /* FOOTER - volume section */
+  /* FOOTER - volume section LG */
   #volume {
     padding-left: 30px;
   }

@@ -95,12 +95,12 @@
       <!-- MAIN - categories section -->
       <section>
         <ul id="categories">
-          <li>made for you</li>
-          <li>podcasts</li>
-          <li>charts</li>
-          <li>mood</li>
-          <li>new releases</li>
-          <li>discover</li>
+          <li>made for you<hr></li>
+          <li>podcasts<hr></li>
+          <li>charts<hr></li>
+          <li>mood<hr></li>
+          <li>new releases<hr></li>
+          <li>discover<hr></li>
         </ul>
       </section>
       <!-- MAIN - played section -->
@@ -108,32 +108,50 @@
         <h2>Recently played</h2>
         <div class="playlist-container">
           <div class="playlist">
-            <img src="img/songs/metal_lifting.jpg" alt="heavy metal cover">
+            <div class="img">
+              <img src="img/songs/metal_lifting.jpg" alt="heavy metal cover">
+              <div class="overlay"><i class="far fa-play-circle"></i></div>
+            </div>
             <h4>Heavy Metal</h4>
             <span>Misi</span>
           </div>
           <div class="playlist">
-            <img src="img/songs/stranger.jpeg" alt="stranger things cover">
+            <div class="img">
+              <img src="img/songs/stranger.jpeg" alt="stranger things cover">
+              <div class="overlay"><i class="far fa-play-circle"></i></div>
+            </div>
             <h4>Stanger Things, Vol. 1 (a Netlix Original Series Soundtrack)</h4>
             <span>Kyle Dixon & Michael Stein</span>
           </div>
           <div class="playlist">
-            <img src="img/songs/aquietplace.jpeg" alt="a quiet place cover">
+            <div class="img">
+              <img src="img/songs/aquietplace.jpeg" alt="a quiet place cover">
+              <div class="overlay"><i class="far fa-play-circle"></i></div>
+            </div>
             <h4>A quiet place</h4>
             <span>KyroZavoree</span>
           </div>
           <div class="playlist">
-            <img src="img/songs/split.jpeg" alt="split cover">
+            <div class="img">
+              <img src="img/songs/split.jpeg" alt="split cover">
+              <div class="overlay"><i class="far fa-play-circle"></i></div>
+            </div>
             <h4>Split</h4>
             <span>West Thordson</span>
           </div>
           <div class="playlist">
-            <img src="img/songs/cure.jpeg" alt="a cure for welness cover">
+            <div class="img">
+              <img src="img/songs/cure.jpeg" alt="a cure for welness cover">
+              <div class="overlay"><i class="far fa-play-circle"></i></div>
+            </div>
             <h4>A Cure for welness</h4>
             <span>kez</span>
           </div>
           <div class="playlist">
-            <img src="img/songs/sinister.jpeg" alt="sinister cover">
+            <div class="img">
+              <img src="img/songs/sinister.jpeg" alt="sinister cover">
+              <div class="overlay"><i class="far fa-play-circle"></i></div>
+            </div>
             <h4>Sinister Soundtrack</h4>
             <span>KIT</span>
           </div>
@@ -148,11 +166,17 @@
         </div>
         <div class="playlist-container">
           <div class="playlist">
-            <img src="img/songs/radar.jpeg" alt="release radar cover">
+            <div class="img">
+              <img src="img/songs/radar.jpeg" alt="release radar cover">
+              <div class="overlay"><i class="far fa-play-circle"></i></div>
+            </div>
             <h3>Release Radar</h3>
           </div>
           <div class="playlist">
-            <img src="img/songs/mixdaily.jpeg" alt="daily mix 1 cover">
+            <div class="img">
+              <img src="img/songs/mixdaily.jpeg" alt="daily mix 1 cover">
+              <div class="overlay"><i class="far fa-play-circle"></i></div>
+            </div>
             <h3>Daily Mix 1</h3>
           </div>
         </div>
@@ -205,8 +229,8 @@
         <li><i class="fas fa-undo-alt"></i></li>
       </ul>
       <ul>
-        <li class="time">2:05</li>
-        <li class="time-bar"></li>
+        <li class="time">0:00</li>
+        <li class="time-bar"><div id="animation-bar"></div></li>
         <li class="time">4:11</li>
       </ul>
     </section>
@@ -217,7 +241,7 @@
         <li><i class="fas fa-list-ul"></i></li>
         <li><i class="fab fa-chromecast"></i>
         <li><i class="fas fa-volume-up"></i></li>
-        <li class="time-bar"></li>
+        <li class="time-bar"><div id="hover-bar"><span></span></div></li>
       </ul>
     </section>
 
